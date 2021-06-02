@@ -18,21 +18,21 @@ public class JavaChallengeApp extends BaseObject{
 	 }
 	  
 	 public void run(String[] args) throws IOException {
-		// Challenge Part 1 - java Fundamentals
-//			JavaFundamental javaFundamental = new JavaFundamental ();
-//			javaFundamental.finalTest();
+  		    // Challenge Part 1 - java Fundamentals
+			JavaFundamental javaFundamental = new JavaFundamental ();
+			javaFundamental.finalTest();
 
 			// Challenge Part 2 - Datentypen
-//			Datentypen datentypen= new Datentypen();
-//			datentypen.zeigeDatentypen();
+			Datentypen datentypen= new Datentypen();
+			datentypen.zeigeDatentypen();
 
 			// Challenge Part 3 - while / do while
-//			Loops loops=new Loops();
-//			loops.zeigeZaehlschleifen();
+			Loops loops=new Loops();
+			loops.zeigeZaehlschleifen();
 			
 			// Challenge Part 4 - Zähle Buchstaben
-//			LetterCount letterCount=new LetterCount();
-//			letterCount.countLetter();
+			LetterCount letterCount=new LetterCount();
+			letterCount.countLetter();
 		 
 		    // Challenge Part 5 
 		    Personenschlange pSchlange = new Personenschlange();
