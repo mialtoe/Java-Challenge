@@ -34,33 +34,77 @@ public class JavaChallengeApp extends BaseObject{
 //			LetterCount letterCount=new LetterCount();
 //			letterCount.countLetter();
 		 
+		    // Challenge Part 5 
+		    Personenschlange pSchlange = new Personenschlange();
+
+		    // Personen für Schlange komplett initialisieren   
 		    Person person1 = new Person("Heidi","Klum");
 		    Person person2 = new Person("Willi","Wusel");
 		    Person person3 = new Person("Paul","Paulsen");
-//		    System.out.println(person1.getVorname()+person.getNachname());
-		    	    
+		    Person person4 = new Person("Paula","Paulchen");
+		    Person person5 = new Person("Thomas","Müller");
+		    Person person6 = new Person("Karl","Meier");
+		    Person person7 = new Person("Sepp","Ferstl");
+		    Person person8 = new Person("Claudi","Roth");
+		    Person person9 = new Person("Hansi","Hinterseher");
+
+		    // nochmal nachsehen ob Schlange wirklich leer
+		    if (pSchlange.empty())
+		    	System.out.println("Schlange ist leer");
+		    else 
+		    	System.out.println("Schlange ist nicht leer");
+		    	
+		    // Test Löschen aus leerer Liste
+		    Person tryremove = pSchlange.remove();
+		    if (tryremove == null)
+		    	System.out.println("Schlange leer, kein remove möglich");
 		    
-		    Personenschlange pSchlange = new Personenschlange();
-		    System.out.println("XX"+pSchlange.empty());
+		    // jetzt 8 Personen in die Schlange
 		    pSchlange.add(person1);
 		    pSchlange.add(person2);
-		    
 		    pSchlange.add(person3);
+		    pSchlange.add(person4);
+		    pSchlange.add(person5);
+		    pSchlange.add(person6);
+		    pSchlange.add(person7);
+		    pSchlange.add(person8);
+		    // und noch ein Versuch einer 9. Person
+		    try {
+		      pSchlange.add(person9);
+		    } catch (IndexOutOfBoundsException e) {
+		         System.out.println("kein Platz mehr in der Liste für Person 9");	
+		    }
 		    
-		    System.out.println("CCC: "+pSchlange.search(person3));
+		 // jetzt ist die Schlange nicht mehr leer
+		    if (pSchlange.empty())
+		    	System.out.println("Schlange ist leer");
+		    else 
+		    	System.out.println("Schlange ist nicht mehr leer");
 		    
-		    
+		    // an wievielter Stelle befindet sich Paul Paulsen?
+		    System.out.println(String.format("gesuchte Person %s %s befindet sich an Stelle %s",person3.getVorname(),person3.getNachname(),(pSchlange.search(person3)+1)));
+
+		    // komplette Schlange anzeigen
 		    pSchlange.getAll();
+		    
+		    // wer steht ganz vorne in der Schlange
 		    Person head = pSchlange.head();
-		    System.out.println("ganz vorne in der Schlange:"+head.getVorname()+head.getNachname());
+		    System.out.println(String.format("ganz vorne in der Schlange: %s %s",head.getVorname(),head.getNachname()));
 		    
+		    // erste aus Schlange entfernen
 		    Person removedPerson = pSchlange.remove();
-		    System.out.println("aus Schlange entfernt:"+removedPerson.getVorname()+removedPerson.getNachname());
+		    System.out.println(String.format("aus Schlange entfernt: %s %s",removedPerson.getVorname(),removedPerson.getNachname()));
+		    
+		    // wieder komplette Schlange ausgeben zur Kontrolle
 		    pSchlange.getAll();
-		    System.out.println("XX"+pSchlange.empty());
+		    
+		    // ist die Schlange leer?
+		    System.out.println(String.format("Schlange leer?: %s",pSchlange.empty()));
+		    // Schlange jetzt leeren
 		    pSchlange.reset();
+		    // prüfen ob Schlange leer
 		    pSchlange.getAll();
-		    System.out.println("XX"+pSchlange.empty());
+		    System.out.println(String.format("Schlange leer?: %s",pSchlange.empty()));
 		    
 	 }
 	 
