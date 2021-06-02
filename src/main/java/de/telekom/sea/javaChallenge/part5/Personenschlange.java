@@ -2,7 +2,7 @@ package de.telekom.sea.javaChallenge.part5;
 
 import java.lang.ArrayIndexOutOfBoundsException;
 
-public class Personenschlange {
+public class Personenschlange extends BaseObject{
 	
 	private int maxPersonen = 8;
 	private Object[] personenListe = new Object[maxPersonen];
@@ -76,7 +76,7 @@ public class Personenschlange {
     	if (anzahlPersonen>0) {
           System.out.println("Komplette Liste:");
     	  for (int i=0; i < anzahlPersonen; i++) {
-    		  Person p = (Person) personenListe[i];
+    		  PersonImpl p = (PersonImpl) personenListe[i];
     		  System.out.println(p.getVorname()+" "+p.getNachname());
     	  }
     	}

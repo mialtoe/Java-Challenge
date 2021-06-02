@@ -20,7 +20,7 @@ public class PersonenschlangeTest {
 	@Test             // Gutfall eine Person rein und wieder auslesen
 	void add_Test1() {
 		//Arrange
-		Person person1 = new Person("Heidi","Klum");
+		PersonImpl person1 = new PersonImpl("Heidi","Klum");
 		cut.add(person1);
 		
 		//Act
@@ -35,14 +35,14 @@ public class PersonenschlangeTest {
 	@Test             // Gutfall 8 Personen rein und wieder auslesen
 	void add_Test2() {
 		//Arrange
-		Person person1 = new Person("Heidi","Klum");
-	    Person person2 = new Person("Willi","Wusel");
-	    Person person3 = new Person("Paul","Paulsen");
-	    Person person4 = new Person("Paula","Paulchen");
-	    Person person5 = new Person("Thomas","Müller");
-	    Person person6 = new Person("Karl","Meier");
-	    Person person7 = new Person("Sepp","Ferstl");
-	    Person person8 = new Person("Claudi","Roth");
+		PersonImpl person1 = new PersonImpl("Heidi","Klum");
+	    PersonImpl person2 = new PersonImpl("Willi","Wusel");
+	    PersonImpl person3 = new PersonImpl("Paul","Paulsen");
+	    PersonImpl person4 = new PersonImpl("Paula","Paulchen");
+	    PersonImpl person5 = new PersonImpl("Thomas","Müller");
+	    PersonImpl person6 = new PersonImpl("Karl","Meier");
+	    PersonImpl person7 = new PersonImpl("Sepp","Ferstl");
+	    PersonImpl person8 = new PersonImpl("Claudi","Roth");
 		cut.add(person1);
 		cut.add(person2);
 		cut.add(person3);
@@ -64,15 +64,15 @@ public class PersonenschlangeTest {
 	void add_Test3() {
 		//Arrange
 		String errorClass = "";
-		Person person1 = new Person("Heidi","Klum");
-	    Person person2 = new Person("Willi","Wusel");
-	    Person person3 = new Person("Paul","Paulsen");
-	    Person person4 = new Person("Paula","Paulchen");
-	    Person person5 = new Person("Thomas","Müller");
-	    Person person6 = new Person("Karl","Meier");
-	    Person person7 = new Person("Sepp","Ferstl");
-	    Person person8 = new Person("Claudi","Roth");
-	    Person person9 = new Person("Hansi","Hinterseher");
+		PersonImpl person1 = new PersonImpl("Heidi","Klum");
+	    PersonImpl person2 = new PersonImpl("Willi","Wusel");
+	    PersonImpl person3 = new PersonImpl("Paul","Paulsen");
+	    PersonImpl person4 = new PersonImpl("Paula","Paulchen");
+	    PersonImpl person5 = new PersonImpl("Thomas","Müller");
+	    PersonImpl person6 = new PersonImpl("Karl","Meier");
+	    PersonImpl person7 = new PersonImpl("Sepp","Ferstl");
+	    PersonImpl person8 = new PersonImpl("Claudi","Roth");
+	    PersonImpl person9 = new PersonImpl("Hansi","Hinterseher");
 		cut.add(person1);
 		cut.add(person2);
 		cut.add(person3);
@@ -94,8 +94,8 @@ public class PersonenschlangeTest {
 	@Test   // wer steht vorne in der Schlange?
 	void head_Test() {
 		//Arrange
-		Person person1 = new Person("Heidi","Klum");
-	    Person person2 = new Person("Willi","Wusel");
+		PersonImpl person1 = new PersonImpl("Heidi","Klum");
+	    PersonImpl person2 = new PersonImpl("Willi","Wusel");
 		cut.add(person1);
 		cut.add(person2);
 		
@@ -132,8 +132,8 @@ public class PersonenschlangeTest {
 	@Test   
 	void reset_Test() {
 		//Arrange
-		Person person1 = new Person("Heidi","Klum");
-		Person person2 = new Person("Willi","Wusel");
+		PersonImpl person1 = new PersonImpl("Heidi","Klum");
+		PersonImpl person2 = new PersonImpl("Willi","Wusel");
 		cut.add(person1);
 		cut.add(person2);
 		   
@@ -147,10 +147,10 @@ public class PersonenschlangeTest {
 	@Test   
 	void search_Test() {
 		//Arrange
-		Person person1 = new Person("Heidi","Klum");
-		Person person2 = new Person("Willi","Wusel");
-	    Person person3 = new Person("Paul","Paulsen");
-	    Person person4 = new Person("Paula","Paulchen");
+		PersonImpl person1 = new PersonImpl("Heidi","Klum");
+		PersonImpl person2 = new PersonImpl("Willi","Wusel");
+	    PersonImpl person3 = new PersonImpl("Paul","Paulsen");
+	    PersonImpl person4 = new PersonImpl("Paula","Paulchen");
 		cut.add(person1);
 		cut.add(person2);
 		cut.add(person3);
@@ -166,10 +166,10 @@ public class PersonenschlangeTest {
 	@Test   
 	void search_Test_ohne_Erfolg() {
 		//Arrange
-		Person person1 = new Person("Heidi","Klum");
-		Person person2 = new Person("Willi","Wusel");
-	    Person person3 = new Person("Paul","Paulsen");
-	    Person person4 = new Person("Paula","Paulchen");
+		PersonImpl person1 = new PersonImpl("Heidi","Klum");
+		PersonImpl person2 = new PersonImpl("Willi","Wusel");
+	    PersonImpl person3 = new PersonImpl("Paul","Paulsen");
+	    PersonImpl person4 = new PersonImpl("Paula","Paulchen");
 		cut.add(person1);
 		cut.add(person2);
 		cut.add(person3);
@@ -184,10 +184,10 @@ public class PersonenschlangeTest {
 	@Test   
 	void remove_Test_mit_Erfolg() {
 		//Arrange
-		Person person1 = new Person("Heidi","Klum");
-		Person person2 = new Person("Willi","Wusel");
-	    Person person3 = new Person("Paul","Paulsen");
-	    Person person4 = new Person("Paula","Paulchen");
+		PersonImpl person1 = new PersonImpl("Heidi","Klum");
+		PersonImpl person2 = new PersonImpl("Willi","Wusel");
+	    PersonImpl person3 = new PersonImpl("Paul","Paulsen");
+	    PersonImpl person4 = new PersonImpl("Paula","Paulchen");
 		cut.add(person1);
 		cut.add(person2);
 		cut.add(person3);
@@ -229,7 +229,7 @@ public class PersonenschlangeTest {
 	@Test   
 	void empty_Test_nicht_leer() {
 		//Arrange
-		Person person1 = new Person("Heidi","Klum");
+		PersonImpl person1 = new PersonImpl("Heidi","Klum");
 		cut.add(person1);
 		
 		//Act 

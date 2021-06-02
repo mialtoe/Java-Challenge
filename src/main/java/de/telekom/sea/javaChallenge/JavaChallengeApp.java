@@ -38,15 +38,15 @@ public class JavaChallengeApp extends BaseObject{
 		    Personenschlange pSchlange = new Personenschlange();
 
 		    // Personen für Schlange komplett initialisieren   
-		    Person person1 = new Person("Heidi","Klum");
-		    Person person2 = new Person("Willi","Wusel");
-		    Person person3 = new Person("Paul","Paulsen");
-		    Person person4 = new Person("Paula","Paulchen");
-		    Person person5 = new Person("Thomas","Müller");
-		    Person person6 = new Person("Karl","Meier");
-		    Person person7 = new Person("Sepp","Ferstl");
-		    Person person8 = new Person("Claudi","Roth");
-		    Person person9 = new Person("Hansi","Hinterseher");
+		    PersonImpl person1 = new PersonImpl("Heidi","Klum");
+		    PersonImpl person2 = new PersonImpl("Willi","Wusel");
+		    PersonImpl person3 = new PersonImpl("Paul","Paulsen");
+		    PersonImpl person4 = new PersonImpl("Paula","Paulchen");
+		    PersonImpl person5 = new PersonImpl("Thomas","Müller");
+		    PersonImpl person6 = new PersonImpl("Karl","Meier");
+		    PersonImpl person7 = new PersonImpl("Sepp","Ferstl");
+		    PersonImpl person8 = new PersonImpl("Claudi","Roth");
+		    PersonImpl person9 = new PersonImpl("Hansi","Hinterseher");
 
 		    // nochmal nachsehen ob Schlange wirklich leer
 		    if (pSchlange.empty())
