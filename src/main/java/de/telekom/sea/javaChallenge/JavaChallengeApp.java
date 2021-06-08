@@ -7,7 +7,8 @@ import de.telekom.sea.javaChallenge.part2.*;
 import de.telekom.sea.javaChallenge.part3.*;
 import de.telekom.sea.javaChallenge.part4.*;
 import de.telekom.sea.javaChallenge.part5.*;
-import java.io.IOException;
+import de.telekom.sea.javaChallenge.part5g.*;
+//import java.io.IOException;
 
 
 
@@ -19,23 +20,24 @@ public class JavaChallengeApp extends BaseObject{
 	  
 	 public void run(String[] args) throws IOException {
   		    // Challenge Part 1 - java Fundamentals
-			JavaFundamental javaFundamental = new JavaFundamental ();
-			javaFundamental.finalTest();
+//			JavaFundamental javaFundamental = new JavaFundamental ();
+//			javaFundamental.finalTest();
 
 			// Challenge Part 2 - Datentypen
-			Datentypen datentypen= new Datentypen();
-			datentypen.zeigeDatentypen();
+//			Datentypen datentypen= new Datentypen();
+//			datentypen.zeigeDatentypen();
 
 			// Challenge Part 3 - while / do while
-			Loops loops=new Loops();
-			loops.zeigeZaehlschleifen();
+//			Loops loops=new Loops();
+//			loops.zeigeZaehlschleifen();
 			
 			// Challenge Part 4 - Zähle Buchstaben
-			LetterCount letterCount=new LetterCount();
-			letterCount.countLetter();
+//			LetterCount letterCount=new LetterCount();
+//			letterCount.countLetter();
 		 
 		    // Challenge Part 5 
-		    Personenschlange pSchlange = new Personenschlange();
+//		    Personenschlange pSchlange = new Personenschlange();
+		    PersonenschlangeGen pSchlange = new PersonenschlangeGen();
 
 		    // Personen für Schlange komplett initialisieren   
 		    PersonImpl person1 = new PersonImpl("Heidi","Klum");
@@ -98,6 +100,12 @@ public class JavaChallengeApp extends BaseObject{
 		    // wieder komplette Schlange ausgeben zur Kontrolle
 		    pSchlange.getAll();
 		    
+		    pSchlange.add(person1);  // entfernte Person wieder hinten dran
+		    System.out.println(String.format("wieder in Schlange hinten dran: %s %s",person1.getVorname(),person1.getNachname()));
+
+		    // wieder komplette Schlange ausgeben zur Kontrolle
+		    pSchlange.getAll();
+
 		    // ist die Schlange leer?
 		    System.out.println(String.format("Schlange leer?: %s",pSchlange.empty()));
 		    // Schlange jetzt leeren
